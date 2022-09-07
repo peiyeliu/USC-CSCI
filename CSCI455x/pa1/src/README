@@ -1,0 +1,72 @@
+Name: Peiye Liu
+USC NetId: peiyeliu
+CSCI 455 PA1
+Fall 2020
+
+----------------------------------------------
+CERTIFY IT'S YOUR WORK
+
+"I certify that the work submitted for this assignment does not
+violate USC's student conduct code.  In particular, the work is my
+own, not a collaboration, and does not involve code created by other
+people, except for the the resources explicitly mentioned in the CS 455
+Course Syllabus.  And I did not share my solution or parts of it with
+other students in the course."
+
+Initial below to "sign" the above statement:
+
+PL
+
+----------------------------------------------
+ACKNOWLEDGE ANY OUTSIDE SOURCES
+
+List here any code you submitted for this assignment that was written
+with significant help of a course staff member, or code used from the
+textbook.  Be specific about what methods or algorithms are involved,
+and what sections of the textbook are involved (if applicable): [you do
+not need to list any of the code that we wrote for the assignment,
+i.e., the contents of the starter files for the assignment]
+
+
+
+----------------------------------------------
+KNOWN BUGS or LIMITATIONS:
+
+
+
+----------------------------------------------
+ANY OTHER NOTES FOR THE GRADER:
+
+
+
+----------------------------------------------
+ANSWERS TO ASSIGNMENT README QUESTIONS (if applicable):
+
+Question 1:
+The code allowed:
+(1) the code written by the course staff
+(2) the code from the textbook
+(3) students are required the acknowledge the source in the README file, permission from the instructor might be
+required
+
+Question 2:
+two heads: 0.25
+one head, one tail: 0.50
+two tails: 0.25
+
+For each coin, the probability of head and tail are equal, 0.5 to 0.5.
+two heads = first coin head and second coin head, probability = 0.5*0.5 = 0.25
+two tails = first coin head and second coin tail, probability = 0.5*0.5 = 0.25
+for the one head one tail result, there are two cases:
+first coin head, second coin tail, probability = 0.5*0.5 = 0.25
+first coin tail, second coin head, probability = 0.5*0.5 = 0.25
+overall, the probability for one head one tail = 0.25 + 0.25 = 0.5
+
+Question 3:
+1500 trials is a fair value to give results within 1% derivation.
+
+Question 4:
+when the input value is 2000000000, 2047483647 ot 2097483647, the bar chart still showed up correctly within 5 minutes
+the max value of Integer is 2147483647, when this value was typed, no output was shown after 1 hour, but there is not
+overflow error shown.
+

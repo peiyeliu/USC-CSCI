@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.16/jquery-ui.js"></script>
+    <link href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.16/themes/ui-lightness/jquery-ui.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+    <div align="center">
+{#        HW5#}
+        <h1>CSCI572 HW5</h1>
+    </div>
+    <div align="center">
+        <form action="/getQuery" method="get">
+            <label for="query">Query: </label>
+            <input id="query" type="text" name="query">
+            <br><br>
+
+            <label for="lucene">Lucene</label>
+            <input id="lucene" type="radio" name="engine" value="Lucene" checked="checked">
+            <br>
+            <label for="pagerank">PageRank</label>
+            <input id="pagerank" type="radio" name="engine" value="PageRank">
+
+            <br><br>
+            <button onclick="validate()">Search</button>
+        </form>
+    </div>
+
+    <div id="result" style="display: block">
+        {% if number == 0 %}
+            <h3>The query is : {{ query }}</h3>
+            <h3>The query result of engine: {{ engine }}</h3>
+            <h3>No result was found.</h3>
+            <ul>
+                <li>The query input should not be empty.</li>
+                <li>The query input might not be valid.</li>
+                <li>Either "Lucene" or "PageRank" need to be selected.</li>
+            </ul>
+        {% else %}
+            <h3>The query is : {{ query }}</h3>
+            <h3>The query result of engine: {{ engine }}</h3>
+            <p>Showing {{ number }} results out of {{ total }}</p>
+        {% endif %}
+        {% if misspelled == true %}
+            <h3>Search instead for <a href="/getQuery?query={{ corrected_query }}&engine={{ engine }}" id="correctQuery">{{ corrected_query }}</a></h3>
+        {% endif %}
+        <table>
+        {% for entry in result %}
+            <tr>
+            <ul>
+                <li>Title: <a href="{{ entry.url }}">{{ entry.title }}</a></li>
+                <li>URL: {{ entry.url }}</li>
+                <li>ID: {{ entry.id }}</li>
+                <li>Description: {{ entry.description }}</li>
+            </ul>
+            </tr>
+        {% endfor %}
+        </table>
+    </div>
+
+{#    HW5 update: autocomplete function#}
+{#    Reference: https://roytuts.com/autocomplete-input-suggestion-using-python-and-flask/#}
+<script>
+    $(function () {
+        $("#query").autocomplete({
+            source: function (request, response){
+                $.ajax({
+                    type: "POST",
+                    url: "/",
+                    dataType: "json",
+                    data: {
+                        q : request.term
+                    },
+                    success: function (data) {
+                        response(data);
+                    },
+                    error: function (jqXHR, textStatus, errorThrown){
+                        console.log(textStatus + " " + errorThrown)
+                    }
+                })
+            },
+            minLength: 1
+        })
+    })
+
+</script>
+</body>
+</html>

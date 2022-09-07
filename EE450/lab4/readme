@@ -1,0 +1,18 @@
+EE450 Lab4
+Peiye Liu
+USCID: 5961770016
+Email: peiyeliu@usc.edu
+
+Instruction on running the program:
+1. Compile the file:
+    The Makefile document is provided, type "make lab4" to compile the code
+    type "g++ lab4.cpp -lstdc++ -Wall -Wextra -std=c++17 -o lab4.out" if the Makefile is not provided
+
+2. Test case input file:
+    The test case input file should be defined by following the lab4 guideline.
+    Note: In each line, the packet receive time for each input should be in ascending order.
+
+3. Run the code:
+    To run the program, type "./lab4.out [filename]"
+    For example, "./lab4.out input-file.txt"
+    The output will be shown in the console, as requested in the lab4 guideline.

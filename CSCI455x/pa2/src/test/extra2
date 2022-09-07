@@ -1,0 +1,12 @@
+
+put 2
+put 5
+put 15
+put 21
+put 27
+put 5
+put 15
+pick 0
+pick 0
+put 21
+end

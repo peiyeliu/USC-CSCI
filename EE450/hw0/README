@@ -1,0 +1,80 @@
+EE450 Summer 2021 HW0
+Student name: Peiye Liu
+USC ID: 5961770016
+Email: peiyeliu@usc.edu
+
+1. Program Summary
+    This program allows user to create graph from text input file. 
+    After creating the graph, the user can get the significant factor result by typing the indexes of two individuals.
+    The program is command-shell-like interactive program. The user can do multiple queries on the created graph without re-run the program.
+
+2. Analysis of the problem
+    In the problem discription, there are a couple of useful information:
+        (1) "any direction has significance factor of 1", that indicates a unweighted graph.
+        (2) "the graph of people has no loops", this condition tells that the path between any two nodes is unique.
+    Because of (1) and (2), a simple graph visit algorithm Breadth-first-search or Depth-first-search will solve this problem.
+    Breadth-first-search was chosen to avoid stack overflow issues. Since Depth-first-search requires multiple recursive call, which may cause problem when the graph is big.
+
+
+3. How to run the program
+	(1) Put 'HWO-extra-a.cpp' and 'Makefile' in an empty folder.
+	(2) test cases file will be in the same folder with the cpp and Makefile documents.
+
+    Go into the program folder, type 'make main' to generate the executable file.
+    To run the executable file, type './main' for mac, linux system (type '.\main' for windows system')
+
+4. Test cases
+    All test cases should be in txt format.
+    To simply the problem. For a group of N people. Each person will be represented by an interger from 1 to N. (Not zero-based!)
+    Here is an example of test file:
+
+    3
+    1 2
+    2 3
+
+    In the test file, the first line contain one integer which tells how many peoples in the group.
+    After the first line, each line contains two integers separated by a space. The first integer is the start of the edge and the second integer represent the end of the edge.
+
+    This open website https://test-case-generator.herokuapp.com/ can be used to generate a random tree with large number of nodes.
+    When using this website to create test cases, choose "Random unweighted tree" function. Then set "Indexed From" option as 1 and set "Include N Nodes Flag" as true.
+
+
+5. a simple guide of the program
+
+    (1) type ./main (.\main on Windows system) to run the program. The output shows:
+    
+        Type 'exit' or 'quit' to exit the program.  
+        Please type the name of the test file:
+
+    (2) then type the name of the test file, for example: 'simpletree.txt'. If the filename is wrong or the file can not be opened, an error message will be displayed and a new prompt will be shown.
+        The output shows:
+
+
+        The graph has been initialized successfully
+        The number of nodes is: 7
+        To make the query, type the index of two nodes separated by a space
+        Type 'exit' or 'quit' to exit the program.
+        Please type the index of source and destination node (separate by a space):
+
+
+    (3) then type the index of source and destination nodes, separated by a space. For example: '4 7':
+        If the input is invalid, an error message will be displayed. Otherwise, the result will be displayed and another prompt will show up. Here is an example:
+
+
+        there are 4 edges between node 4 and node 7
+        the significance factor between node 4 and node 7 is 0.25
+        Please type the index of source and destination node (separate by a space):
+    
+    (4) In this program, type 'exit' or 'quit' will terminate the program.
+
+
+6. References
+    (1) The string splitting (line 61, 62, 207, 208): https://stackoverflow.com/questions/14265581/parse-split-a-string-in-c-using-string-delimiter-standard-c
+    (2) Using getline() function to read the file (line 49, 55, 163, 197): https://stackoverflow.com/questions/7868936/read-file-line-by-line-using-ifstream-in-c
+    (3) File open and close (line 173 to line 177): https://stackoverflow.com/questions/7868936/read-file-line-by-line-using-ifstream-in-c
+    (4) Breadth-first-search algorithm (line 95 to 128) was inspired by the pseudocode in: https://en.wikipedia.org/wiki/Breadth-first_search
+    (5) In 'testfile' folder, the testfile 'onethousand.txt' was created by using this website: https://test-case-generator.herokuapp.com/
+    (6) Using adjacency list to store graph was explained in Discussion 0: https://colab.research.google.com/drive/1bkdrOhyrmw0lcUb2jnc2HqBRlD5vP-ld?usp=sharing
+
+
+

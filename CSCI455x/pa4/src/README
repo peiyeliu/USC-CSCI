@@ -1,0 +1,72 @@
+Name: Peiye Liu
+USC NetID: peiyeliu
+CS 455 PA4
+Fall 2020
+
+----------------------------------------------
+CERTIFY IT'S YOUR WORK
+
+"I certify that the work submitted for this assignment does not
+violate USC's student conduct code.  In particular, the work is my
+own, not a collaboration, and does not involve code created by other
+people, except for the the resources explicitly mentioned in the CS 455
+Course Syllabus.  And I did not share my solution or parts of it with
+other students in the course."
+
+Initial below to "sign" the above statement:
+
+PL
+----------------------------------------------
+ACKNOWLEDGE ANY OUTSIDE SOURCES
+
+List here any code you submitted for this assignment that was written
+with significant help of a course staff member, or code used from the
+textbook.  Be specific about what methods or algorithms are involved,
+and what sections of the textbook are involved (if applicable): [you do
+not need to list any of the code that we wrote for the assignment,
+i.e., the contents of the starter files for the assignment]
+
+
+
+----------------------------------------------
+KNOWN BUGS or LIMITATIONS:
+
+
+
+----------------------------------------------
+DESCRIPTION OF YOUR CLASS DESIGN AND ALGORITHMS AND DATA STRUCTURES USED:
+
+Class design:
+WordFinder: contains the main function to run this program.
+
+AnagramDictionary: the class that builds the dictionary. (IllegalDictionaryException will be throwed when the dictionary is invalid.)
+
+Rack: the class that will give all subsets of a given rack-word.
+
+ScoreTable: the class that calculates the score for a given word.
+
+WordAndScore: the new class I added for this assignment. For each word found, there is a WordAndScore object. It will store the word and its score.
+This class also implements the Comparable interface, which will allow the customized sorting.
+
+Algorithms and Data Structures:
+The data structure used for the dictionary is a HashMap. The key is the canonical format of a given word. (For example, "good" has canonical format "dgoo")
+The value is a HashSet, which will store all words with the same canonical format(the key value).
+Since the dictionary should not have duplicate words. We must check duplication every time when adding words.
+HashSet allow the searching operation in O(1) time complexity, which is better that O(n) for ArrayList.
+
+
+
+
+
+
+
+
+----------------------------------------------
+ANY OTHER NOTES FOR THE GRADER:
+
+
+
+
+
+
+

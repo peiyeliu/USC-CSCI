@@ -1,0 +1,46 @@
+Name: Peiye Liu
+USC ID: 5961770016
+News site crawled: https://www.nytimes.com
+Number of threads: 16
+
+Fetch Statistics
+================
+# fetches attempted:19996
+# fetches succeeded:13709
+# fetches failed or aborted:6287
+
+Outgoing URLs
+================
+Total URLs extracted: 711084
+# unique URLs extracted: 301537
+# unique URLs within News site: 169084
+# unique URLs outside News site: 132453
+
+Status Codes:
+=============
+200 OK: 13709
+301 Moved Permanently: 1691
+302 Found: 4556
+400 Bad Request: 25
+401 Unauthorized (RFC 7235): 1
+403 Forbidden: 2
+404 Not Found: 7
+410 Gone: 3
+502 Bad Gateway: 1
+503 Service Unavailable: 1
+
+File Sizes:
+===========
+< 1KB: 0
+1KB ~ < 10KB: 24
+10KB ~ < 100KB: 2353
+100KB ~ < 1MB: 9770
+>= 1MB: 1525
+
+Content Types:
+==============
+image/png: 13
+text/html: 13650
+image/jpeg: 2
+image/svg+xml: 6
+image/vnd.microsoft.icon: 1
