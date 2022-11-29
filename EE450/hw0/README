@@ -1,7 +1,5 @@
 EE450 Summer 2021 HW0
 Student name: Peiye Liu
-USC ID: 5961770016
-Email: peiyeliu@usc.edu
 
 1. Program Summary
     This program allows user to create graph from text input file. 
@@ -68,13 +66,6 @@ Email: peiyeliu@usc.edu
     (4) In this program, type 'exit' or 'quit' will terminate the program.
 
 
-6. References
-    (1) The string splitting (line 61, 62, 207, 208): https://stackoverflow.com/questions/14265581/parse-split-a-string-in-c-using-string-delimiter-standard-c
-    (2) Using getline() function to read the file (line 49, 55, 163, 197): https://stackoverflow.com/questions/7868936/read-file-line-by-line-using-ifstream-in-c
-    (3) File open and close (line 173 to line 177): https://stackoverflow.com/questions/7868936/read-file-line-by-line-using-ifstream-in-c
-    (4) Breadth-first-search algorithm (line 95 to 128) was inspired by the pseudocode in: https://en.wikipedia.org/wiki/Breadth-first_search
-    (5) In 'testfile' folder, the testfile 'onethousand.txt' was created by using this website: https://test-case-generator.herokuapp.com/
-    (6) Using adjacency list to store graph was explained in Discussion 0: https://colab.research.google.com/drive/1bkdrOhyrmw0lcUb2jnc2HqBRlD5vP-ld?usp=sharing
 
 
 

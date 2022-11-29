@@ -1,0 +1,9 @@
+# Compile and output files
+*.class
+*.o
+*.out
+
+# IDE and OS related file
+.idea
+.iml
+.DS_Store
